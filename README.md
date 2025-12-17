@@ -1,38 +1,19 @@
 # test-curso
 ```mermaid
 classDiagram
+    Persona --> AsignadorLocales
+    LocalVotacion --> AsignadorLocales
     class Persona {
-        -String nombre
-        -String comuna
-        -double latitud
-        -double longitud
-        +getNombre() String
-        +getComuna() String
-        +getLatitud() double
-        +getLongitud() double
-        +toString() String
+        -nombre : String
+        -comuna : String
+        +getNombre()
     }
-
     class LocalVotacion {
-        -String nombre
-        -String comuna
-        -double latitud
-        -double longitud
-        +getNombre() String
-        +getComuna() String
-        +getLatitud() double
-        +getLongitud() double
-        +toString() String
+        -nombre : String
+        -comuna : String
     }
-
     class AsignadorLocales {
-        -List~LocalVotacion~ locales
-        -List~Persona~ personas
-        +calcularDistanciaHaversine(lat1, lon1, lat2, lon2) double
-        +asignarLocalesMasCercanos()
-        +mostrarAsignaciones()
+        +calcularDistanciaHaversine()
     }
 
-    Persona ||--o{ AsignadorLocales : usa
-    LocalVotacion ||--o{ AsignadorLocales : procesa
 ```
