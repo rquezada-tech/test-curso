@@ -1,4 +1,5 @@
 # test-curso
+```mermaid
 classDiagram
     class Persona {
         -String nombre
@@ -34,3 +35,4 @@ classDiagram
 
     Persona ||--o{ AsignadorLocales : usa
     LocalVotacion ||--o{ AsignadorLocales : procesa
+```
